@@ -25,7 +25,7 @@ module.exports.run = async function({ api, event, args, Users }) {
     }
 
     api.sendMessage(
-        `👑 𝖫𝖨𝖲𝖳 𝖮𝖥 ${qtv} 𝖠𝖣𝖬𝖨𝖭𝖨𝖲𝖳𝖱𝖠𝖳𝖮𝖱𝖲 𝖨𝖭𝖫𝖴𝖣𝖤𝖲 :\n${listad}`,
+        `list of ${qtv} administrators includes :\n${listad}`,
         event.threadID,
         event.messageID
     );

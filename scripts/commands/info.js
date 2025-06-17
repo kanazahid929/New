@@ -1,14 +1,14 @@
 module.exports.config = {
-	name: "admin",
-	version: "1.0.1", 
-	permssion: 0,
-  premium: false,
-  prefix: true,
-	credits: "ALVI",
-	description: "Admin info",
-	category: "...",
-	cooldowns: 1,
-	dependencies: 
+    name: "admin",
+    version: "1.0.0",
+    permission: 0,
+    credits: "nayan",
+    prefix: true,
+    description: "",
+    category: "prefix",
+    usages: "",
+    cooldowns: 5,
+    dependencies: 
 	{
     "request":"",
     "fs-extra":"",
@@ -19,15 +19,29 @@ module.exports.run = async function({ api,event,args,client,Users,Threads,__GLOB
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
-var link =["https://i.postimg.cc/502V7BFq/Messenger-creation-191-C6998-AB3-D-4-FB2-B26-F-A6-DFCEFF386-D.jpg", 
-            
-            "https://i.postimg.cc/502V7BFq/Messenger-creation-191-C6998-AB3-D-4-FB2-B26-F-A6-DFCEFF386-D.jpg", 
-            
-"https://i.postimg.cc/502V7BFq/Messenger-creation-191-C6998-AB3-D-4-FB2-B26-F-A6-DFCEFF386-D.jpg",
-            
-            "https://i.postimg.cc/502V7BFq/Messenger-creation-191-C6998-AB3-D-4-FB2-B26-F-A6-DFCEFF386-D.jpg"];
+const time = process.uptime(),
+		hours = Math.floor(time / (60 * 60)),
+		minutes = Math.floor((time % (60 * 60)) / 60),
+		seconds = Math.floor(time % 60);
+const moment = require("moment-timezone");
+var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
   
-var callback = () => api.sendMessage({body:`🌻-𝗗𝗢 𝗡𝗢𝗧 𝗧𝗥𝗨𝗦𝗧 𝗧𝗛𝗘 𝗕𝗢𝗧 𝗢𝗣𝗘𝗥𝗔 𝗧𝗢𝗥-🌻\n
-------------------------------------------------\n🌺-𝗡𝗮𝗺𝗲-🌺       : 𝗧𝗮𝗻𝘃𝗶𝗿 𝗔𝗵𝗺𝗲𝗱 (𝗗𝗶𝗽𝘁𝗼)_//-🫦\n🍁-𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸-🍁 :𝗧𝗮𝗻𝘃𝗶𝗿 𝗔𝗵𝗺𝗲𝗱_//-🫦\n💚-𝗥𝗲𝗹𝗶𝗴𝗶𝗼𝗻-💚    : (𝗜𝘀𝗹𝗮𝗺)\n🌸-𝗣𝗲𝗿𝗺𝗮𝗻𝗲𝗻𝘁 𝗔𝗱𝗱𝗿𝗲𝘀𝘀-🌸 : (𝗗𝗵𝗮𝗸𝗮)\n🌿-𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝗔𝗱𝗱𝗿𝗲𝘀𝘀-🌿 :(𝗗𝗵𝗮𝗸𝗮,𝗗𝗵𝗮𝗺𝗿𝗮𝗶)\n🔥-𝗚𝗲𝗻𝗱𝗲𝗿-🔥     : (𝗠𝗮𝗹𝗲)\n♻️-𝗔𝗴𝗲-♻️            : 18+\n🔰-𝗥𝗲𝗹𝗮𝘁𝗶𝗼𝗻𝘀𝗵𝗶𝗽-🔰 : (𝗦𝗜𝗡𝗚𝗘𝗟_//-😜)\n✴️-𝗪𝗼𝗿𝗸-✴️         : 𝗦𝘁𝘂𝗱𝗲𝗻𝘁_//-🫣\n📩-𝗚𝗺𝗮𝗶𝗹-📩        : 𝘁𝗮𝗻𝘃𝗶𝗿𝘅𝘅𝘅𝘅@𝗴𝗺𝗮𝗶𝗹.𝗰𝗼𝗺\n❇️-𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽-❇️ :  wa.me/+8801323850908\n♀️-𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺-♀️  : t.me/𝗧𝗮𝗻𝘃𝗶𝗿 𝗔𝗵𝗺𝗲𝗱_//-🥱\n-🌼𝗙𝗯 𝗹𝗶𝗻𝗸-🌼   :𝗵𝘁𝘁𝗽𝘀://𝘄𝘄𝘄.𝗳𝗮𝗰𝗲𝗯𝗼𝗼𝗸.𝗰𝗼𝗺/𝗽𝗿𝗼𝗳𝗶𝗹𝗲.𝗽𝗵𝗽?𝗶𝗱=61550669852479&mibextid=𝗸𝗙𝘅𝘅𝗝𝗗 `,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
-      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
+var callback = () => api.sendMessage({body:`
+--------------------------------------------
+𝐍𝐚𝐦𝐞       : 𝑵𝑨𝒀𝑶𝑲⸙ //⓫⓻➎_𝙎𝙀𝙔𝘼𝙈👀🥂 🍷 
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 : 𝙬𝙬𝙬.𝙛𝙖𝙘𝙚𝙗𝙤𝙤𝙠.𝙘𝙮𝙗𝙚𝙧𝙯𝙤𝙣𝙚71𝙗𝙙
+𝐑𝐞𝐥𝐢𝐠𝐢𝐨𝐧   : 𝐈𝐬𝐥𝐚𝐦
+𝐏𝐞𝐫𝐦𝐚𝐧𝐞𝐧𝐭 𝐀𝐝𝐝𝐫𝐞𝐬𝐬:𝙠𝙝𝙪𝙡𝙣𝙖 - 𝙨𝙖𝙩𝙠𝙝𝙞𝙧𝙖
+𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐀𝐝𝐝𝐫𝐞𝐬𝐬: 𝙎𝘼𝙏𝙆𝙃𝙄𝙍𝘼
+𝐆𝐞𝐧𝐝𝐞𝐫.   : 𝐌𝐚𝐥𝐞
+𝐀𝐠𝐞           : 𝟏𝟖+
+𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧𝐬𝐡𝐢𝐩 : 𝙋𝙐𝙍𝙀 𝙎𝙄𝙉𝙂𝙇𝙀👀💦
+𝐖𝐨𝐫𝐤        : 𝘾𝙔𝘽𝙀𝙍 𝙕𝙊𝙉𝙀
+𝐆𝐦𝐚𝐢𝐥       : 𝙎𝙀𝙔𝘼𝙈727228@𝙜𝙢𝙞𝙡.𝙘𝙤𝙢
+𝙛𝙖𝙫𝙤𝙧𝙞𝙩𝙚 𝙥𝙚𝙧𝙨𝙤𝙣 :𝙁𝘼𝙃𝙄𝙈👀💢
+
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐋𝐢𝐧𝐤 : https://www.facebook.com/𝙘𝙮𝙗𝙚𝙧 𝙡𝙚𝙖𝙙𝙚𝙧`,attachment: fs.createReadStream(__dirname + "/cache/1.png")}, event.threadID, () => 
+    fs.unlinkSync(__dirname + "/cache/1.png"));  
+      return request(encodeURI(`https://graph.facebook.com/61553312939129/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`)).pipe(
+fs.createWriteStream(__dirname+'/cache/1.png')).on('close',() => callback());
    };
