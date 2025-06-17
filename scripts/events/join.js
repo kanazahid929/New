@@ -48,7 +48,7 @@ module.exports.run = async function({ api, event, Users }) {
   if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     //api.changeNickname(`𝗕𝗢𝗧 ${(!global.config.BOTNAME) ? "Buddy" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 
-    let gifUrl = 'https://i.imgur.com/mBKcO6C.gif';
+    let gifUrl = 'https://i.imgur.com/UHAhbWP.jpeg';
 let gifPath = __dirname + '/Nayan/join/join.gif';
 
 axios.get(gifUrl, { responseType: 'arraybuffer' })
@@ -56,25 +56,25 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
     fs.writeFileSync(gifPath, response.data);
   if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-    return api.sendMessage("-•|•- 𝐈 𝐜𝐨𝐦𝐢𝐧𝐠 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐠𝐫Ø𝐮𝐩 𝐂𝐚𝐲𝐛𝐞𝐫 𝐂𝐚𝐭 😺 𝐰𝐢𝐭𝐡 𝐓𝐚𝐧𝐯𝐢𝐫 _//-👅💦!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} -🫦𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗_//-😍«\n\n-𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂𝗮𝗹𝗮𝘆𝗸𝘂𝗺_//-😊☘
+    return api.sendMessage("𝑨𝑳𝑨𝑹𝑻⚠️𝑪𝒀𝑩𝑬𝑹-𝑪𝑬𝑶_𝑺𝑬𝒀𝑨𝑴 𝑯𝑬𝑹𝑬 ⁹²⚠️😈!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
--😵𝗕𝗢𝗧 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗙𝗨𝗟_//-😵 !!! 
+BOT CONNECTED SUCCESFUL !!! 
 
--🫦𝗔𝗣𝗣𝗥𝗢𝗩𝗔𝗟 𝗔𝗟𝗟𝗢𝗪 𝗜𝗡 𝗧𝗛𝗜𝗦 𝗚𝗥𝗢𝗨𝗣_//-🫦!!!
-<------------------------------>\n\n-🫦TO 𝗩𝗜𝗘𝗪 𝗔𝗡𝗬 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗨𝘀𝗲_//-👉${global.config.PREFIX}help\nSee command👉 ${global.config.PREFIX}command
+APPROVAL ALLOW IN THIS GROUP!!!
+<------------------------------>\n\nTO VIEW ANY COMMAND Use👉${global.config.PREFIX}help\nSee command👉 ${global.config.PREFIX}command
 \n\EXAMPLE:👇\n${global.config.PREFIX}admin (information)\n${global.config.PREFIX}islam (video)\n${global.config.PREFIX}tik (link)\n${global.config.PREFIX}fbvideo (link)
 <------------------------------>
--🫦𝗔𝗡𝗗 𝗙𝗢𝗥 𝗔𝗡𝗬 𝗖𝗢𝗠𝗣𝗟𝗔𝗜𝗡𝗧𝗦 𝗢𝗥 𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗕𝗢𝗧 𝗢𝗣𝗘𝗥𝗔𝗧𝗢𝗥_//-🫦 
+AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
 
--🫦𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 : 𝗧𝗮𝗻𝗩𝗶𝗿 𝗔𝗵𝗺𝗲𝗱_//-🫣
+DEVELOPER :𝘾𝙀𝙊 𝙎𝙀𝙔𝘼𝙈
 
--🫦𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗔𝗰𝗰𝗼𝘂𝗻𝘁 𝗟𝗶𝗻𝗸 :- 
+🟣Facebook Account Link: 
 
-𝗵𝘁𝘁𝗽𝘀://𝘄𝘄𝘄.𝗳𝗮𝗰𝗲𝗯𝗼𝗼𝗸.𝗰𝗼𝗺/𝘄𝘄𝘄.T𝘅𝗻𝘅𝘅.𝗰𝗼𝗺61550669852479_//-🥵
+https://www.𝘾𝙔𝘽𝙀𝙍.𝙃𝘿.....
 
--🫦𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽 𝗡𝘂𝗺𝗯𝗲𝗿 :- 𝘄𝗮.𝗺𝗲/+8801323850908_//-😉
+🔵WHATSAPP NUMBER: 014......𝙚𝙧𝙤𝙤𝙧
 
--🫦𝗘𝗺𝗮𝗶𝗹 :-𝘁𝗮𝗻𝘃𝗶𝗿𝘅𝘅𝘅𝘅𝗴𝗺𝗮𝗶𝗹.𝗰𝗼𝗺_//-🥵`, attachment: fs.createReadStream(gifPath)}, threadID));
+🟢SUPPORT EMAIL : 𝙝𝙖𝙠3𝙧872@𝙜𝙢𝙞𝙡.𝙘𝙤𝙢`, attachment: fs.createReadStream(gifPath)}, threadID));
   }})
 .catch(error => {
     console.error(error);
@@ -106,11 +106,11 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
         let avtAnime = (await axios.get(encodeURI(
           `https://graph.facebook.com/${event.logMessageData.addedParticipants[o].userFbId}/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`), { responseType: "arraybuffer" })).data;
         var ok = [
-          'https://i.imgur.com/cJUpNpa.jpeg',
-          'https://i.imgur.com/nusJ4PS.jpeg',
-          'https://i.imgur.com/l0TrR0h.jpeg',
-          'https://i.imgur.com/N0kBFHh.jpeg',
-          'https://i.imgur.com/LmOhcg0.jpeg'
+          'https://i.imgur.com/dDSh0wc.jpeg',
+          'https://i.imgur.com/UucSRWJ.jpeg',
+          'https://i.imgur.com/OYzHKNE.jpeg',
+          'https://i.imgur.com/V5L9dPi.jpeg',
+          'https://i.imgur.com/M7HEAMA.jpeg'
         ]
         let background = (await axios.get(encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`), { responseType: "arraybuffer", })).data;
         fs.writeFileSync(pathAva, Buffer.from(avtAnime, "utf-8"));
@@ -163,7 +163,34 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
         abx.push(fs.createReadStream(__dirname + `/Nayan/join/${o}.png`))
       }
       memLength.sort((a, b) => a - b);
-      (typeof threadData.customJoin == "undefined") ? msg = ` -😍𝗛𝗲𝗹𝗹𝗼 {name}\n𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼-😍 {threadName}\n-🤍𝘆𝗼𝘂'𝗿𝗲 𝘁𝗵𝗲 {soThanhVien}th 𝗺𝗲𝗺𝗯𝗲𝗿 𝗼𝗻 𝘁𝗵𝗶𝘀 𝗴𝗿𝗼𝘂𝗽 𝗽𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝗷𝗼𝘆_//-😊😍"\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
+      (typeof threadData.customJoin == "undefined") ? msg = `.╔════•|      ✿      |•════╗
+ 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐
+╚════•|      ✿      |•════╝
+
+
+{name}\n✨🆆🅴🅻🅻 🅲🅾🅼🅴✨  
+           
+           ❥𝐍𝐄𝐖
+
+        🇲‌🇪‌🇲‌🇧‌🇪‌🇷
+
+        
+        
+      {threadName}\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien}༄ নঁং মে্ঁম্বা্ঁরঁ🌻🍂 ࿐
+      
+      🖤🌸আমাদের প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀
+
+        🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀
+         
+         
+         
+ ╔╦══• 🌻🍂 •✠•❀•✠ •   •══╦╗
+   💥🔥𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑💥🔥
+
+                           ☟                     
+
+    🍂🌻𝑪𝑬𝑶-_𝑺𝑬𝒀𝑨𝑴🌻😽 
+╚╩══•    •✠•❀•✠ •    •══╩╝ "\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
       var nameAuthor = await Users.getNameUser(event.author)
       msg = msg
         .replace(/\{iduser}/g, iduser.join(', '))
